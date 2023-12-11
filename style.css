@@ -251,7 +251,7 @@ main {
 @media screen and (max-width: 600px)
 {
     .PhotoBox {
-        margin-top: -100px;
+        margin-top: 0px;
     }
 
     .ContentBox {
@@ -278,7 +278,7 @@ main {
     }
 
     .PhotoBox {
-        margin-top: -80px;
+        margin-top: 0px;
         width: 22rem;
         height: 22rem;
     }
