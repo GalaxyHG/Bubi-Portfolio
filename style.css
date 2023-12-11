@@ -1,0 +1,321 @@
+/* Global Stylization */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(118deg, #A17400 0%, #975B00 20.22%, #924600 45.12%, #6A3900 66.07%, #542800 96.14%);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 40vh 100vh 80vh 20vh;
+    grid-template-areas: "h"
+                        "m"
+                        "s"
+                        "a"
+                        "f";
+}
+
+aside {
+    grid-area: a;
+}
+
+section {
+    grid-area: s;
+    border: solid 1px blue;
+}
+
+footer {
+    grid-area: f;
+    background: rgba(217, 217, 217, 0.25);
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.LogoBox {
+    background: rgba(217, 217, 217, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #FFF;
+    padding: 2px;
+}
+
+/* Header Stylization */
+
+header {
+    grid-area: h;
+    background: rgba(217, 217, 217, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.LogoBox span {
+    color: #B56C00;
+    font-weight: bold;
+}
+
+header li {
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+li a {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Menu Dropdown Stylization */
+
+#MenuBars {
+    display: none;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+  
+.dropdown {
+    position: relative;
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: -60px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display:block;
+}
+
+/* Main Stylization */
+
+main {
+    grid-area: m;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.PhotoBox {
+    width: 18.75rem;
+    height: 18.75rem;
+    background: rgba(217, 217, 217, 0.25);
+    box-shadow: 0px 5px 16px 0px rgba(181, 181, 181, 0.40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PhotoBox img {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 10.3125rem;
+}
+
+.ContentBox {
+    width: 56.25rem;
+    height: 18.75rem;
+    background: rgba(217, 217, 217, 0.25);
+    box-shadow: 0px 5px 16px 0px rgba(181, 181, 181, 0.40);
+    padding: 20px;
+}
+
+.ContentBox span {
+    color: #FFF;
+    text-align: left;
+    font-size: 3.125rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.ContentBox span span {
+    color: #FFB800;
+}
+
+.ContentBox ul {
+    color: #FFF;
+    font-size: 1.625rem;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.Titulo {
+    color: #FFF;
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.Titulo span {
+    color: #FFB800;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 1260px)
+{
+    .ContentBox {
+        width: 40rem;
+        height: 18.75rem
+    }
+
+    .ContentBox span{
+        font-size: 3rem;;
+    }
+
+    .ContentBox ul {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 980px)
+{
+    .ContentBox {
+        width: 35rem;
+        height: 18.75rem
+    }
+}
+
+@media screen and (max-width: 890px)
+{
+    .container {
+        grid-template-rows: 10vh 80vh 100vh 20vh;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ContentBox {
+        width: 35rem;
+        height: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ContentBox span {
+        display: none;
+    }
+
+    .ContentBox ul {
+        margin-top: 0;
+    }
+
+    .ContentBox {
+        margin-top: 50px;
+    }
+
+    .Titulo {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    .PhotoBox {
+        margin-top: -100px;
+    }
+
+    .ContentBox {
+        width: 35rem;
+        height: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ContentBox span {
+        display: none;
+    }
+
+    .ContentBox ul {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 590px)
+{
+    .container {
+        grid-template-rows: 10vh 110vh 100vh 80vh 20vh;
+    }
+
+    .PhotoBox {
+        margin-top: -80px;
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .PhotoBox img {
+        width: 18rem;
+        height: 18rem;
+        border-radius: 10.3125rem;
+    }
+
+    .ContentBox {
+        margin-top: 0;
+        width: 22rem;
+        height: 25rem;
+    }
+
+    .Titulo {
+        color: #FFF;
+        text-align: left;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .dropdown {
+        display: inline-block;
+    }
+
+    header {
+        padding: 0px 30px;
+    }
+
+    #header ul li {
+        display: none;
+    }
+
+    #MenuBars {
+        display: block;
+    }
+}
